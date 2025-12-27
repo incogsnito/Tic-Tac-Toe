@@ -1,15 +1,28 @@
-const turn = document.querySelector('#turn');
+const turn = document.querySelector("#turn");
 
-const x = 'X'
-const o = 'O'
+const container = document.querySelector(".container");
 
+let current = "x";
 
-document.querySelector('.container').addEventListener('click', function(e){
+container.addEventListener("click", function (e) {
   const target = e.target;
-  const targetContent = document.createElement('p');
-  target.appendChild(targetContent);
 
+  if (target.innerText !== "") return;
 
-  
-}, );
+  target.innerText = current;
+
+  if (current === "x") {
+    current = "o";
+    turn.
+  } else {
+    current = "x";
+  }
+
+  if (turn.innerText === "X") {
+    turn.innerText = "O";
+  } else {
+    turn.innerText = "X";
+  }
+});
+
 
