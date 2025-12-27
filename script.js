@@ -29,6 +29,11 @@ container.addEventListener("click", function (e) {
 });
 
 
+document.querySelector("#refresh").addEventListener('click', ()=>{
+  location.reload();
+})
+
+
 
 
 

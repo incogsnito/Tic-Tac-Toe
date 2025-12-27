@@ -26,6 +26,16 @@ header, section{
   margin: 0 auto;
 }
 
+.turn-x, .turn-o{
+  font-size: 1.5em;
+}
+.turn-x {
+  color: crimson;
+}
+
+.turn-o{
+  color: dodgerblue;
+}
 
 .container{
   margin: 0 auto;
@@ -45,18 +55,17 @@ header, section{
   font-size: 50px;
 }
 
-
 .columns:hover{
   opacity: 0.5;
 }
 
-.turn-x, .turn-o{
-  font-size: 1.5em;
-}
-.turn-x {
-  color: crimson;
+button{
+  background:none;
+  border:none;
+  cursor: pointer;
 }
 
-.turn-o{
-  color: dodgerblue;
+#refresh{
+  width: 50px;
+  height: 50px;
 }
