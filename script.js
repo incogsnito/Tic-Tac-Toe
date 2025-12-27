@@ -13,7 +13,6 @@ container.addEventListener("click", function (e) {
 
   if (current === "x") {
     current = "o";
-    turn.
   } else {
     current = "x";
   }
