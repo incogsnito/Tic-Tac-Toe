@@ -19,9 +19,15 @@ container.addEventListener("click", function (e) {
 
   if (turn.innerText === "X") {
     turn.innerText = "O";
+    turn.classList.add('turn-o');
+    turn.classList.remove('turn-x');
   } else {
     turn.innerText = "X";
+    turn.classList.add('turn-x');
+    turn.classList.remove('turn-o')
   }
 });
+
+
 
 

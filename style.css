@@ -50,3 +50,13 @@ header, section{
   opacity: 0.5;
 }
 
+.turn-x, .turn-o{
+  font-size: 1.5em;
+}
+.turn-x {
+  color: crimson;
+}
+
+.turn-o{
+  color: dodgerblue;
+}
