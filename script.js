@@ -46,11 +46,13 @@ container.addEventListener("click", function (e) {
 
   const index = target.dataset.index; //Depending on the element, grab it's assigned index and reassigns JS index
   board[index] = current;
+  target.innerText = current;
 
   const winner = checkWin();
 
-  if (winner) {
-    winning.innerText = `${winner.toUpperCase()} wins!`;
+  if (winner){
+    winning.classList.toggle('winning-screen');
+    winning.classList.remove('invisible');
   }
 
   if (current === "x") {
@@ -70,7 +72,6 @@ container.addEventListener("click", function (e) {
     turn.classList.add("turn-x");
     turn.classList.remove("turn-o");
   }
-  console.log(target, target.dataset.index);
 });
 
 document.querySelector("#refresh").addEventListener("click", () => {
