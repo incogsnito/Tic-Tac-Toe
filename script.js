@@ -1,3 +1,6 @@
+
+const winning = document.querySelector("#winner");
+
 const turn = document.querySelector("#turn");
 
 const container = document.querySelector(".container");
@@ -37,7 +40,6 @@ function checkWin() {
   return null; // No winner yet
 }
 
-const winning = document.querySelector("#winner");
 
 container.addEventListener("click", function (e) {
   const target = e.target;
@@ -46,13 +48,16 @@ container.addEventListener("click", function (e) {
 
   const index = target.dataset.index; //Depending on the element, grab it's assigned index and reassigns JS index
   board[index] = current;
+
   target.innerText = current;
 
   const winner = checkWin();
 
-  if (winner){
-    winning.classList.toggle('winning-screen');
-    winning.classList.remove('invisible');
+  if (winner) {
+    winning.innerText = `${winner.toUpperCase()} wins!`;
+    winning.classList.add('winning-screen');
+    container.classList.add('invisible')
+    return;
   }
 
   if (current === "x") {
@@ -60,8 +65,6 @@ container.addEventListener("click", function (e) {
   } else {
     current = "x";
   }
-
-  target.innerText = current;
 
   if (turn.innerText === "X") {
     turn.innerText = "O";
